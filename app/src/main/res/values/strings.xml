@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Payments</string>
+    <string name="title">title</string>
+    <string name="sub_title">sub title</string>
+    <string name="text_version">Версия %1$S</string>
+    <string name="text_password">Пароль</string>
+    <string name="text_input_password">Введите пароль</string>
+    <string name="text_input_login">Введите логин</string>
+    <string name="text_login">Логин</string>
+    <string name="text_sign_in">Войти</string>
+    <string name="text_error_login_or_password">Неверный логин или пароль</string>
+    <string name="app_sign_out">Выйти</string>
+    <string name="question_signout">Выйти из приложения?</string>
+</resources>
