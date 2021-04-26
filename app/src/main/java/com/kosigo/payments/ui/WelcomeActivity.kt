@@ -15,7 +15,7 @@ class WelcomeActivity : AppCompatActivity() {
         setContentView(R.layout.welcome_activity)
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         lifecycleScope.launchWhenCreated {
-            delay(20000)
+            delay(2000)
             val intent = Intent(this@WelcomeActivity, MainActivity::class.java)
             startActivity(intent)
             finish()

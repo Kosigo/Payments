@@ -23,22 +23,22 @@ class PaymentApplication : Application(), KodeinAware {
     }
 
     lateinit var sharedPreferences: SharedPreferences
-    private val nightMode = "night_mode"
-
 
     override fun onCreate() {
         super.onCreate()
         instance = this
 
-        sharedPreferences =  getSharedPreferences(BuildConfig.APPLICATION_ID, Context.MODE_PRIVATE).apply {
-            getInt(nightMode, AppCompatDelegate.MODE_NIGHT_YES).apply {
-                AppCompatDelegate.setDefaultNightMode(this)
-            }
-        }
+        sharedPreferences = getSharedPreferences(BuildConfig.APPLICATION_ID, Context.MODE_PRIVATE)
+                .apply {
+                    getInt(NIGHT_MODE, AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM).apply {
+                        AppCompatDelegate.setDefaultNightMode(this)
+                    }
+                }
     }
 
     companion object {
         lateinit var instance: PaymentApplication
         const val TOKEN = "TOKEN"
+        const val NIGHT_MODE = "night_mode"
     }
 }
